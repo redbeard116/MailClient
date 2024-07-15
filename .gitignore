@@ -1,0 +1,4 @@
+/.vs/*
+/MailClient/bin/*
+/MailClient/obj/*
+/MailClient/.vs/*
