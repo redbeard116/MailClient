@@ -1,0 +1,88 @@
+﻿<Window x:Class="MailClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        Title="MailClient" Height="450" Width="800">
+    <Grid
+        Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="0">
+
+            <Menu
+                HorizontalAlignment="Left">
+                <MenuItem
+                    Header="Close"/>
+            </Menu>
+
+        </Grid>
+
+        <Grid
+            Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox
+                Grid.Column="0"
+                Style="{StaticResource GroupBoxStyle}">
+                <GroupBox.Header>
+                    <TextBlock
+                        Text="Folders"
+                        FontWeight="SemiBold"/>
+                </GroupBox.Header>
+                <ListBox
+                    BorderThickness="0">
+                    <ListBoxItem>
+                        <TextBlock
+                            Text="Folder 1"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <TextBlock
+                            Text="Folder 2"/>
+                    </ListBoxItem>
+                </ListBox>
+            </GroupBox>
+
+            <Border
+                Grid.Column="1"
+                Margin="2,9,0,1"
+                Style="{StaticResource BorderStyle}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel
+                        Grid.Row="0"
+                        Orientation="Horizontal">
+                        <CheckBox
+                            Content="Check"
+                            Style="{StaticResource CheckBoxStyle}"/>
+                        <Button
+                            Margin="2,0,0,0"
+                            Content="Update"
+                            Style="{StaticResource ButtonStyle}"/>
+                        <TextBox
+                            Margin="2,0,0,0"
+                            Text="Search"
+                            MinWidth="200"
+                            Style="{StaticResource TextBoxStyle}"/>
+                    </StackPanel>
+                    
+                </Grid>
+            </Border>
+        </Grid>
+
+    </Grid>
+</Window>
